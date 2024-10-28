@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form에서 전달받은 결과확인</title>
+  </head>
+  <body>
+    <h1>Result Page</h1>
+    <h3>입력된 사용자 이름 : <span id="name-result"></span></h3>
+    <h3>입력된 사용자 아이디 : <span id="id-result"></span></h3>
+    <h3>입력된 사용자 비밀번호 : <span id="pw-result"></span></h3>
+    <script>
+      /*11_form태그.html 데이터의 11_result.html 데이터를 연결하는 공간*/
+      const 데이터전달하기 = new URL(location.href).searchParams; //최초1회만 작성
+
+      const nameResult = document.getElementById("name-result");
+      nameResult.innerText = 데이터전달하기.get("user-name");
+
+      const idresult = document.getElementById("id-result");
+      /* const idresult =document.getElementById("id-result");
+        ↑ html과 javascript 의미가 같다는 뜻*/
+      idResult.innerText = 데이터전달하기.get("input-id");
+
+      const pwResult = document.getElementById("pw-result");
+      pwResult.innerText = 데이터전달하기.get("input-pw");
+    </script>
+    <hr />
+
+    <h3>입력된 점수값 1번 : <span id="1번점수-결과"></span></h3>
+    <h3>입력된 점수값 1번 : <span id="2번점수-결과"></span></h3>
+    <!--JavaScript 길기 때문에 script로 줄여서 줄임말 작성-->
+
+    <script>
+      const score1 = document.getElementById("1번점수-결과");
+      const score2 = document.getElementById("2번점수-결과");
+
+      score1.innerText = 데이터전달하기.get("1번점수");
+      score2.innerText = 데이터전달하기.get("2번점수");
+    </script>
+  </body>
+</html>
