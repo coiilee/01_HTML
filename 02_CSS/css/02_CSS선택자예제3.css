@@ -1,0 +1,48 @@
+/*자동정렬 단축키 : alt + shift + f 
+  tab으로 띄어쓰기 진행한 주석의 띄어쓰기 없애는 단축키 : shift + tab
+  */
+/*
+        id이름명    : #이름명
+        class이름명 : .이름명
+        */
+.banner-img {
+  width: 100%;
+}
+
+.sandwich-info {
+  background-color: whitesmoke;
+  border: 5px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.재료 {
+  list-style-type: none;
+}
+/*class="재료" 태그 안에 작성된 
+            li 태그를 꾸며준다는 의미*/
+.재료 li {
+  background-color: #ddd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+}
+.재료 li:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.make {
+  list-style-type: ;
+}
+.make li {
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 15px;
+}
+.make li:hover {
+  background-color: coral;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+}

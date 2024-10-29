@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 class id 예제</title>
+
+    <style>
+      /*id 선택자 사용 , main-header 배경색 lightcoral 크기 확장 20px */
+
+      #main-header {
+        background-color: lightcoral;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      /*클래스명 앞에 . 을  작성하지 않으면 스타일 적용이 안됨*/
+      .설명 {
+        background-color: lightblue;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .하이라이트 {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 선택자 class id 예제</h1>
+    <!--ID 선택자 적용-->
+    <div id="main-header">메인 헤더-ID 선택자 적용</div>
+    <!--Class 선택자 적용-->
+    <p class="설명">
+      이 문장은 <span class="하이라이트">class 선택자</span>를 이용하여 디자인이
+      적용된 예제입니다.
+    </p>
+
+    <p class="설명">
+      여러개의 요소에 <span class="하이라이트">동일한 class</span>를 적용하여
+      스타일을 통일할 수 있습니다.
+    </p>
+  </body>
+</html>

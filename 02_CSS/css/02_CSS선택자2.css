@@ -1,0 +1,85 @@
+/* css 파일은 style 파일 내부에 작성한다 생각하고 코딩을 하면 됨*/
+
+/*h1 태그 글자색 orange*/
+h1 {
+  color: orange;
+}
+/*<div id "속성값">,<div/>
+#속성값 {
+    css스타일속성
+}
+<div class="ABC"><div/>
+.ABC {
+    css스타일속성;
+}    
+*/
+.test-div {
+  /*
+    border : 선
+             실선 solid
+             선없음 none
+             
+    */
+  border: 3px solid black;
+
+  /*
+    width : 가로크기 px   %
+    height: 세로크기 px   %
+    */
+  width: 200px;
+  height: 200px;
+  background-color: lavender;
+}
+.test-div:active {
+  background-color: yellow;
+}
+
+.테스트-div {
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.테스트-div:active {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+
+.hover-box {
+  border: 3px solid black;
+  background-color: #ddd;
+  /*cursor: pointer 마우스 커서를 손가락 모양으로 변경
+          zoom*/
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+}
+
+.hover-box:hover {
+  /*background-color: 배경색상 지정
+    background-image : 배경이미지 지정
+    background-size : 배경이미지 크기지정
+    */
+  background-image: url("../../HTML/cat.jpeg");
+  background-size: cover;
+}
+
+.호버-박스 {
+  border: 3px dotted orange;
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+.호버-박스:hover {
+  background-image: url(../../HTML/flower1.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
