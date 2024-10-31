@@ -4,7 +4,7 @@ div {
   border: 2px solid black;
 }
 .A {
-  padding: 20px; /*상 하 좌 우 모두 20px 설정*/
+  padding: 20px; /*상 우 하 좌 모두 20px 설정*/
   background-color: red;
 }
 .B {
