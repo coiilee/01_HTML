@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-items 예제1번</title>
+
+    <style>
+      .container {
+        display: flex;
+        height: 300px;
+        background-color: #fff;
+        border: 2px solid orange;
+      }
+      .container div {
+        background-color: rgb(238, 238, 193);
+        height: 100px;
+        padding: 50px;
+      }
+    </style>
+
+    <!-- 태그 우선순위
+      1순위 : css 속성 : 속성값 !important; 
+           -> 디자인을 작성하는 처음부터 애초에 변경을 하지 못하게 잠금설정
+      2순위 : inline-style 속성
+              <p style="font-size: 20px;">inline-style 속성</p>
+           -> 태그 옆에 직접적으로 스타일을 작성한 것은 엄청 중요한 이유가 있을것이야!!!
+      3순위 : #아이디 속성명
+           ->특수하게 특정아이디에다가만 스타일을 주는 이유가 있겠지 하고 적용하는것
+      4순위 : .클래스 속성명
+           -> 주로 반복적인 디자인 적용. 대표적으로 css가장많이 쓰는 방법
+      5순위 : 태그이름 -->
+  </head>
+  <body>
+    <h1>align-items 실습문제</h1>
+    <h3>위쪽 정렬</h3>
+    <div class="container" style="align-items: flex-start">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+
+    <h3>아래쪽 정렬</h3>
+    <div class="container" style="align-items: flex-end">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+
+    <h3>가운데 정렬</h3>
+    <div class="container" style="align-items: center">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+
+    <h3>기본 정렬</h3>
+    <div class="container" style="align-items: stretch">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+  </body>
+</html>
