@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페 배너</title>
+    <style>
+      /*
+    배너 배경색 #8B4513
+    글자색 흰색
+    패딩상하 60px 좌우 0 
+    글자 가운데 정렬
+    글자 크기 40px 
+    폰트굵기 굵게 
+    박스 그림자 : 가로이동 x 아래로 4px 뿌옇게 10px 검정에서 0.2투명도 */
+
+      /*
+        box-shadow: 0px 오른쪽으로 얼만큼 갈 것인가
+          box-shadow: 4px  아래쪽으로 얼만큼 갈 것인가
+          box-shadow:      12px 얼마나 뿌옇게 만들 것인가
+          box-shadow:           rgba(0,0,0,0.1) 불투명도 설정
+                                rgba(0,0,0)=검정색
+                                rgba( , , ,0.1~1.0) 1에 가까울수록 짙어짐
+        */
+
+      .banner {
+        background-color: #8b4513;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        background-color: #3e2723;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        font-weight: bold;
+      }
+
+      .nav :hover {
+        background-color: #5d4037;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <!--배너-->
+    <div class="banner">카페에 오신 것을 환영합니다.&#x2615;</div>
+
+    <ul class="nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">메뉴</a></li>
+      <li><a href="#">소개하기</a></li>
+      <li><a href="#">연락하기</a></li>
+    </ul>
+
+    <!--메뉴섹션-->
+    <div class="content">
+      <h1>오늘의 메뉴</h1>
+      <div class="menu">
+        <div class="menu-item">
+          <h2>&#x2615; 아메리카노</h2>
+          <p>신선한 원두로 내린 진한 아메리카노를 즐겨보세요.</p>
+        </div>
+
+        <div class="menu-item">
+          <h2>&#x1f370;치즈케이크</h2>
+          <p>부드럽고 진한 치즈케이크 한 조각으로 달콤한 여유를 가져보세요.</p>
+        </div>
+
+        <div class="menu-item">
+          <h2>&#x1F964;라떼</h2>
+          <p>부드러운 우유와 커피의 조화가 돋보이는 라떼입니다.</p>
+        </div>
+
+        <div class="menu-item">
+          <h2>&#x1F95B;도넛</h2>
+          <p>달콤하고 쫄깃한 도넛으로 특별한 간식을 만들어보세요.</p>
+        </div>
+
+        <!--menu-item닫는태그-->
+      </div>
+      <!--menu 닫는 태그-->
+    </div>
+    <!--content 닫는 태그-->
+  </body>
+</html>
