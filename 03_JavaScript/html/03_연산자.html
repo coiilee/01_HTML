@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연산자</title>
+    <link rel="stylesheet" href="../css/03_연산자.css"/>
+    
+  </head>
+  <body>
+    <h1>연산자(operator)</h1>
+    <h3>산술 연산자 + 계산기 만들기</h3>
+    <pre>
+        +, -, *(곱하기), /(나누기=몫), %(=나머지 연산자)
+        예를 들어 
+        16 / 3  = 5 (몫 표기 나머지 생략)
+        16 % 3 = 33333 (몫 생략 나머지 표기)
+
+    </pre>
+
+    <div class="계산기">
+      <div>
+        <label for="input1">첫번째 값 :</label>
+        <input type="number" id="input1" />
+      </div>
+
+      <div>
+        <label for="input2">두번째 값 :</label>
+        <input type="number" id="input2" />
+      </div>
+
+      <!--버튼 클릭시 더하기()함수 호출-->
+      <div class="btn">
+        <button onclick="더하기()">+</button>
+        <button onclick="빼기()">-</button>
+        <button onclick="곱하기()">*</button>
+        <button onclick="몫()">/</button>
+        <button onclick="나머지()">%</button>
+      </div>
+
+      <div>
+        <h2>결과: <span id="계산결과"></span></h2>
+    </div>
+      
+    <div class="">
+
+
+
+      <script src="03_연산자.js"></script>
+
+
+    </div>
+  </body>
+</html>
