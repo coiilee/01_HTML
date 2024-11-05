@@ -1,3 +1,14 @@
+//javascript로 설정한 값을 확인하는 방법
+/*console.log(확인하고자 하는 변수명)
+
+컴퓨터에서 콘솔에 괄호()내부의 값을 기록하고 출력할 수 있음
+
+변수명이란? 
+const 변수명 = 들어온 값;
+*/
+
+console.log("개발자가 코드 확인하는 공간");
+
 //1. 문서 내에 input1 input2 input3 calcResult 요소를 가져오는 const 설정
 
 const number1 = document.getElementById("input1");
@@ -8,13 +19,32 @@ const result = document.getElementById("calcResult");
 //각 number1 = input1   number2 = input2   number3 = input3
 //value값 가지고 오기
 
-const value1 = number1.value;
-const value2 = number2.value;
-const value3 = number3.value;
+/*
+value1과 value2와 value3를 기능 바깥에 작성을 하면 안되는 이유 :
+plus() 기능과 multi() 기능이 시작되기 전에 작성되면 안에 있는 모든 값 현재 0임. 
+*/
 
-function 더하기기능() {
-  result.innerText =
-    Number(number1.value) + Number(number2.value) + Number(number3.value);
+const value1 = number1.value; //무조건 0 - 아무것도 적히지 않은 input값을 가져옴
+const value2 = number2.value; //무조건 0
+const value3 = number3.value; //무조건 0
+
+function plus() {
+  //plus() 버튼을 누르면 input안에 작성한 값을 새로 가져오기를 실행
+  const value1 = number1.value; //plus()버튼을 눌렀을 때 input에서 사용자가 작성한 값을 가져오기
+  const value2 = number2.value;
+  const value3 = number3.value;
+
+  console.log("=====plus 기능 들어오고 난 후=====");
+  console.log("값1 : " + value1);
+  console.log("값2 : " + value1);
+  console.log("값3 : " + value1);
+
+  result.innerText = Number(value1) + Number(value2) + Number(value3);
 }
 
-function 곱하기기능() {}
+function multi() {
+  const value1 = number1.value;
+  const value2 = number2.value;
+  const value3 = number3.value;
+  result.innerText = Number(value1) * Number(value2) * Number(value3);
+}
