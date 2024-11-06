@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/03_연산자과제2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <h1>회원가입</h1>
+        id : <input type="text" id="inputId" placeholder="아이디입력" /><br />
+
+
+        pw :<input type="password" id="inputPw" placeholder="비밀번호입력" /><br />
+
+
+        MobilePhone : <input type="tel" id="inputMp" /><br />
+
+
+        TelPhone : <input type="tel" id="inputTp" /><br />
+
+        
+        <p id="msg" style="display: none">
+          전화번호나 휴대폰 번호를 입력해주세요.
+        </p>
+        <button onclick="user-info()">회원가입</button>
+      </div>
+
+      <div class="form-section">
+        <h1>로그인</h1>
+        id : <input type="text" id="inputId" placeholder="아이디입력" /><br />
+        pw : <input type="password" id="inputPw" placeholder="비밀번호입력" /><br />
+
+        <button onclick="login">로그인 </button>
+      </div>
+    <script src="../js/03_연산자과제2.js"></script>
+  </body>
+</html>
