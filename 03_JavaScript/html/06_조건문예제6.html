@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입출금사이트</title>
+    <style>
+      .account {
+        width: 500px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .row {
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      input {
+        border: 1px solid #ddd;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .입금btn:hover {
+        background-color: yellowgreen;
+        color: white;
+      }
+      .출금btn:hover {
+        background-color: orange;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="account">
+      <div class="row">
+        <h1>잔액 : <span id="output"></span> 원</h1>
+      </div>
+      <div class="row">
+        <label for="amount">금액</label>
+        <input type="text" id="amount" required />
+        <span>원</span>
+      </div>
+
+      <div class="row">
+        <button class="출금btn" onclick="출금기능()">출금</button>
+        <button class="입금btn" onclick="입금기능()">입금</button>
+        <p class="hint"></p>
+      </div>
+    </div>
+
+    <script>
+      const output = document.getElementById("output");
+      const amount = document.getElementById("amount");
+      let balance = 10000; //현재 통장 초기 잔액 만원 통장잔고는 변할 수 있기 때문에 let을 씀
+
+      output.innerText = balance; //초기금액인 10,000원 표시
+
+      function 출금기능() {
+        balance -= Number(amount.value);
+        output.innerText = balance;
+      }
+
+      function 입금기능() {
+        const amount = document.getElementById("amount");
+
+        balance += Number(amount.value); //더하기: 이어붙이기와 더하기 Number
+        output.innerText = balance; //input에 작성한 금액을 기존에 있던 잔액에 더해서
+        //최종 추가된 값으로 다시 보여주기
+
+        //input이 빈값이 상태에서 입금 버튼 누르면 금액을 입력해주세요 alert창 뜨게하기
+        if (amount >= 1) {
+          amount.innerText = "";
+        } else alert("금액을 입력해주세요");
+
+        //input 값 지워주는 트릭 추가
+        amount.value = "";
+      }
+    </script>
+  </body>
+</html>
