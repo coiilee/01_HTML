@@ -41,5 +41,6 @@ function checkSeason() {
     msg.className = "winter";
   } else {
     msg.innerText = "1에서 12사이의 숫자를 입력하세요";
+    msg.className = ""; //빈칸을 작성해서 기존에 작성된 class 밀어내기
   }
 }
