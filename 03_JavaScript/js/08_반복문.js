@@ -69,3 +69,70 @@ function check4() {
 }
 //true로 들어왔을 때 중괄호 안에 작성된
 //for 반복문이 끝나고 나면 alert창으로 // 최종으로 출력된 수들 보여주기
+
+/* while문 기본 구조 
+while(조건) {
+//반복할 코드 } */
+
+//while1 기능의 버튼을 누르면 1부터 5까지 숫자를 더한 값을 출력
+function while1() {
+  let num = 1; //let은 변할 수 있는 변수명을 작성 const는 변할수 없는 상수명 작성
+  while (num <= 5) {
+    //조건이 true일때 실행할 구문 작성
+    alert("num의 숫자값은" + num + "입니다.");
+    //계속 num값이 1이기 때문에 무한 반복
+    //num 숫자를 1씩 증가시켜서 숫자가 5가 되면 while문을 종료하기
+    num++; //num= num + 1;
+  }
+}
+
+//while2기능의 버튼을 누르면 1부터 10까지 더한 숫자값 출력
+//console.log로 abc라는 변수명에 들어있는 값 출력
+//while3 break 를 이용해 숫자 5에서 멈추고 기존의 console.log들만 출력해주기
+function while2() {
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("===while2의 버튼======");
+    console.log("abc의 값: " + abc);
+    abc++;
+  }
+}
+
+function while3() {
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("===while2의 버튼======");
+    console.log("abc의 값: " + abc);
+    abc++;
+
+    if (abc == 5) {
+      break;
+    }
+  }
+}
+
+//while4라는 지역변수 안에서만 사용하는 변수명을 설정할 경우네는 {}안에 변수명을 작성
+// xyz 숫자 5를 확인
+function while4() {
+  let xyz = 0;
+  while (xyz <= 20) {
+    xyz++;
+    console.log(xyz);
+  }
+}
+
+//반복문.html과 반복분.js에 while5() 버튼 생성.
+//생성한 다음 시작 숫자를 5로 시작하고 20으로 끝나는 while 조건 작성
+//중간에 15라는 숫자를 만나면 while 중지
+
+function while5() {
+  let start = 5;
+  while (start <= 20) {
+  
+    console.log("숫자는 " + start "입니다.");
+    start++;
+    if (start == 15) {
+      break;
+    }
+  }
+}

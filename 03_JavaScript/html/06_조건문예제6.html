@@ -66,9 +66,24 @@
       output.innerText = balance; //초기금액인 10,000원 표시
 
       function 출금기능() {
-        balance -= Number(amount.value);
-        output.innerText = balance;
+        //출금할 때 은행어플에서 비밀번호4자리가 일치하는지 확인하고 일치하면 출금
+        //비밀번호 1234
+        const password = prompt("비밀번호를 입력하세요.");
+        if (password == "1234") {
+          if (Number(amount.value) > balance) {
+            alert("출금금액이 잔액보다 클 수 없습니다.");
+          } else {
+            //출금할 금액이 현재 통장에 들어있는 금액보다 작을 경우
+            balance -= Number(amount.value);
+            output.innerText = balance;
+          }
+          //amount.value = "";
+        } else {
+          alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+        }
       }
+      //만약 비밀번호가 일치할 경우 출금이 되고 일치하지 않은 경우 비밀번호 다시 입력하기.
+      //만약 출금할 금액이 잔액보다 클 경우 , amount.value이용하기.
 
       function 입금기능() {
         const amount = document.getElementById("amount");
@@ -78,12 +93,14 @@
         //최종 추가된 값으로 다시 보여주기
 
         //input이 빈값이 상태에서 입금 버튼 누르면 금액을 입력해주세요 alert창 뜨게하기
-        if (amount >= 1) {
-          amount.innerText = "";
-        } else alert("금액을 입력해주세요");
 
         //input 값 지워주는 트릭 추가
         amount.value = "";
+
+        if (amount) {
+        } else {
+          alert("금액을 입력해주세요.");
+        }
       }
     </script>
   </body>

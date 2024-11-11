@@ -25,12 +25,44 @@
                 -true일때 반복, false일때 반복 종료
         증감식 : 초기식에 사용된 값을 변환 시키는 식 
                 -> 변환된 초기식에 의해서 조건식의 결과가 달라지게 함 
+
     </pre>
     <button onclick="check1()">확인1</button>
     <button onclick="check2()">확인2</button>
     <button onclick="check3()">확인3</button>
     <button onclick="check4()">확인4</button>
 
-    <script src="../js/07_반복문.js"></script>
+    <h1>중첩 반복문(2중 for문)</h1>
+    <pre>
+      - 반복문 내부에 또 반복문이 작성된 형태 
+      - 메모리 사용량이 많아 사용을 지양 
+      [작성법]
+      for(초기식1;조건식1;증감식1) {
+        //내부에 있는 for문은 초기식1이 true일때 실행
+        for(초기식2;조건식2;증감식2) {
+          초기식1과 초기식2가 true일때 실행 
+        }
+      }
+    </pre>
+
+    <h1>while문</h1>
+    <pre>
+      -끝이 정확하게 정해져 있지 않은 반복에서 주로 사용
+      (ex:어떤 값이 입력되기 전까지 반복)
+
+      [작성법]
+      while(조건식) {
+        조건식이 true인 경우 반복 수행할 코드 ; }
+        -조건식이 true인 경우 내부 코드를 1회 반복 후 다시 조건식 검사 실행 
+        ->false가 나올 때까지 무한 반복 
+      
+    </pre>
+    <button onclick="while1()">while 버튼1</button>
+    <button onclick="while2()">while 버튼2</button>
+    <button onclick="while3()">while 버튼3</button>
+    <button onclick="while4()">while 버튼4</button>
+    <button onclick="while5()">while 버튼5</button>
+
+    <script src="../js/08_반복문.js"></script>
   </body>
 </html>
