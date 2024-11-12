@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파라미터와 아규먼트 활용하기</title>
+  </head>
+  <body>
+    <h1>차 구매하기</h1>
+    <button onclick="차구매('소나타')">소나타 구매하기</button>
+    <button onclick="차구매('아반떼')">아반데 구매하기</button>
+    <button onclick="차구매('제네시스')">제네시스 구매하기</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      function 차구매(model) {
+        const result = document.getElementById("result");
+        result.innerText = model + " 구매가 완료되었습니다.";
+      }
+    </script>
+
+    <!--<script>
+      function 차구매() {
+        const result = prompt("구매할 차종을 입력하세요.");
+        if (abc) {
+          result.innerText = abc + " 가 선택되었습니다.";
+        } else {
+          alert("차종을 입력해주세요");
+        }
+      }
+    </script>-->
+  </body>
+</html>

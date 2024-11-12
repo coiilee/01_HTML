@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결혼정보회사 소개팅 준비</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 10px 20px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>소개팅 대상자 선택</h2>
+    <button onclick="결정사()">소개팅 준비</button>
+    <h2 id="result">여기에 소개팅 결과가 표시됩니다.</h2>
+
+    <script>
+      const result = document.getElementById("result");
+
+      function 결정사() {
+        const abc = prompt("소개팅 대상자를 입력하세요.");
+        if (abc) {
+          result.innerText = abc + "님과 소개팅을 준비합니다.";
+        } else {
+          alert("소개팅 대상자가 없네요!");
+        }
+      }
+    </script>
+  </body>
+</html>
