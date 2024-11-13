@@ -30,7 +30,10 @@ function selectMenu() {
   const 랜덤숫자 = Math.floor(Math.random() * 메뉴들.length);
   //                          0.0000001~0.9999999 사이의 실수 * 메뉴갯수 -> 정수.소수
   //                                    소수모두버리기((랜덤소수 * 소수))
-  consol.log("메뉴들[" + 랜덤숫자 + "] = " + 메뉴들[랜덤숫자]);
+
   menuResult.innerText = 메뉴들[랜덤숫자];
   //                        메뉴들[랜덤의index숫자가 들어옴];
+
+  console.log("메뉴들[" + 랜덤숫자 + "] = " + 메뉴들[랜덤숫자]);
+  console.log(`메뉴들[${랜덤숫자}] =  ${메뉴들[랜덤숫자]}`);
 }
