@@ -4,7 +4,7 @@ function checkHobby() {
   let count = 0;
 
   //for문을 이용해 체크 여부 검사하고, 체크된 경우 누적된 체크값 확인 및 카운트 증가하기
-  for (let i = 1; i < hobbys.length; i++) {
+  for (let i = 0; i < hobbys.length; i++) {
     if (hobbys[i].checked) {
       str += hobbys[i].value + " ";
       count++;
@@ -21,6 +21,5 @@ function checkHobby() {
     document.getElementById("result").innerHTML = "선택한 취미가 없습니다.";
   }
 
-  //삼한 연산자로 표현
-  const inText = count > 0 ? true : false;
+  //삼항 연산자로 표현
 }

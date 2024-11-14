@@ -38,7 +38,6 @@
 
         //arr1 뒤에 [숫자] 대괄호 안에 숫자를 넣지 않으면
         //arr1 들어있는 모든 값이 출력됨
-        document.getElementById("result").innerText = arr1[0];
         //for문을 활용해서
         //각 [0]부터 [3]까지 출력하기 원함 -> for문 활용해 출력 가능
 
@@ -48,6 +47,7 @@
           //arr1[2]
           //arr1[3] 까지 모두 확인을 할 수 있음
           alert(arr1[i]); //arr1[0]
+          document.getElementById("result").innerText += arr1[i];
         }
       }
     </script>

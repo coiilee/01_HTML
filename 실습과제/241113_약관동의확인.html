@@ -56,28 +56,62 @@
   <body>
     <form action="" id="terms-form">
       <h2>회원가입 약관 및 취미 선택</h2>
-      <input type="checkbox" required />
-      <label>서비스 이용 약관 동의</label><br />
-      <input type="checkbox" required />
-      <label>개인정보 수집 및 이용 동의</label><br />
-      <input type="checkbox" required />
-      <label>마케팅 정보 수신 동의(선택)</label><br />
+
+      <label
+        ><input type="checkbox" id="service" name="agree" />서비스 이용 약관
+        동의</label
+      ><br />
+      <label
+        ><input type="checkbox" id="privacy" name="agree" />개인정보 수집 및
+        이용 동의</label
+      ><br />
+      <label
+        ><input type="checkbox" id="marketing" name="agree" />마케팅 정보 수신
+        동의(선택)</label
+      ><br />
 
       <h3>취미 선택</h3>
 
-      <input type="checkbox" name="hobby" id="book" />
-      <label for="book">독서</label>
+      <label for="book"
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="book"
+        />독서</label
+      >
       <br />
-      <input type="checkbox" name="hobby" id="sports" />
-      <label for="sports">운동</label>
-      <br />
-      <input type="checkbox" name="hobby" id="cooking" />
-      <label for="cooking">요리</label>
-      <br />
-      <input type="checkbox" name="hobby" id="trip" />
-      <label for="trip">여행</label><br />
 
-      <button onclick="check()">확인하기</button>
+      <label for="sports"
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="sports"
+        />운동</label
+      >
+      <br />
+
+      <label for="cooking"
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="cooking"
+        />요리</label
+      >
+      <br />
+
+      <label for="trip"
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="trip"
+        />여행</label
+      ><br />
+
+      <button onclick="submitForm()">확인하기</button>
       <p id="result"></p>
     </form>
 
