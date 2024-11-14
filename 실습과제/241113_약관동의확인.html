@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #terms-form {
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2,
+      h3 {
+        color: #ff8c00;
+        text-align: center;
+        font-weight: 600;
+      }
+      label {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #d2691e;
+      }
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: aliceblue;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ffa500;
+      }
+      #name-div {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #d2691e;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="terms-form">
+      <h2>회원가입 약관 및 취미 선택</h2>
+      <input type="checkbox" required />
+      <label>서비스 이용 약관 동의</label><br />
+      <input type="checkbox" required />
+      <label>개인정보 수집 및 이용 동의</label><br />
+      <input type="checkbox" required />
+      <label>마케팅 정보 수신 동의(선택)</label><br />
+
+      <h3>취미 선택</h3>
+
+      <input type="checkbox" name="hobby" id="book" />
+      <label for="book">독서</label>
+      <br />
+      <input type="checkbox" name="hobby" id="sports" />
+      <label for="sports">운동</label>
+      <br />
+      <input type="checkbox" name="hobby" id="cooking" />
+      <label for="cooking">요리</label>
+      <br />
+      <input type="checkbox" name="hobby" id="trip" />
+      <label for="trip">여행</label><br />
+
+      <button onclick="check()">확인하기</button>
+      <p id="result"></p>
+    </form>
+
+    <script src="241113_약관동의확인.js"></script>
+  </body>
+</html>
