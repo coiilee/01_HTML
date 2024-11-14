@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q W E R 로 입력된 키 확인하기</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3(241114).css" />
+  </head>
+  <body onkeyup="keyUp(event)" onkeydown="keyDown(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+
+    <script>
+      /* 화면에서 특정 키보드 값이 입력 될 때마다
+              입력된 알파벳 배경색 변경
+
+              body태그 내에 작성된 모든 태그의 키를 바라보겠다 표기
+
+              onclick onkeyup onkeydown ... 과 같은 이벤트는
+              button 태그나 input 태그에서만 사용할 수 있는 것이 아니라
+              상황에 따라 각 태그에 작성할 수 있음
+          */
+      /*
+          document.querySelector(".Key");
+        첫번째로 작성된 .key 요소만 선택됨
+        document.querySelectorAll(".Key");
+        모든 클래스 이름으로 key가 작성된 .key 요소 모두 선택
+      */
+      const keys = document.querySelectorAll(".key");
+      function keyUp(event) {
+        let idx; //index 줄임말 변수로 많이 사용 인덱스 값을 저장할 변수
+
+        //switch를 이용해 입력된 키와 일치하는 case 실행하기.
+        //입력된 키가 대문자로 입력이 되었을 때,
+        //입력된 키를 소문자로 바꿔서 일치하는 case 실행하기
+        switch (event.key.toLowerCase()) {
+          case "q": // 위에 작성한 toLowerCase 덕분에 Q를 입력해도 q로입력됨
+            idx = 0;
+            break;
+          case "w":
+            idx = 1;
+            break;
+          case "e":
+            idx = 2;
+            break;
+          case "r":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+        //switch는 배경색을 보기 위해 진행중인 코드
+
+        //아래↓코드는 switch로 나타난 결과를 표기하기 위한 코드
+        //idx 번호와 일치하는 keys 배열 요소의 배경색을 변경
+        keys[idx].style.backgroundColor = "yellowgreen";
+
+        //일정 시간 후 다시 흰색으로 변경하는 스크립트 세팅
+        /*
+         *
+         *setTimeout = 자바스크립트에서 만든 기능으로, 일정시간이 종료되면 특정 기능 수행
+         *구버전
+         *setTimeout(함수명, 몇초, 전달인자);
+         *기능이 진행될 때 몇초 후에 기능이 진행될지 설정 번호칸 선택사항
+         */
+        // setTimeout(색상되돌리기, 200, idx);
+        /***
+         * 신버전
+         * setTimeout(함수,지연시간); 코드를 단축시켜서 개발자가 편하게 사용할 수 있게 기능 개선
+         *
+         * setTimeout( () => {설정하고자 하는 기능 코딩 작성}, 지연시간 )
+         *
+         */
+        //일정시간 후 다시 흰색으로 변경 (**신버전**)
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+        }, 200);
+      }
+
+      //키에서 손가락 뗐을 때 배경색 white 변경
+      function 색상되돌리기(idx) {
+        keys[idx].style.backgroundColor = "white";
+      }
+      function keyDown(event) {}
+    </script>
+  </body>
+</html>
