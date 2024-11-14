@@ -9,10 +9,10 @@
   <body onkeyup="keyUp(event)" onkeydown="keyDown(event)">
     <div class="container">
       <div class="key-box">
-        <div class="key">Q</div>
-        <div class="key">W</div>
-        <div class="key">E</div>
-        <div class="key">R</div>
+        <div class="abc">Q</div>
+        <div class="abc">W</div>
+        <div class="abc">E</div>
+        <div class="abc">R</div>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
         document.querySelectorAll(".Key");
         모든 클래스 이름으로 key가 작성된 .key 요소 모두 선택
       */
-      const keys = document.querySelectorAll(".key");
+      const keys = document.querySelectorAll(".abc");
       function keyUp(event) {
         let idx; //index 줄임말 변수로 많이 사용 인덱스 값을 저장할 변수
 

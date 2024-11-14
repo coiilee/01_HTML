@@ -6,7 +6,7 @@ function selectSeason() {
   let season;
   const result = document.getElementById("result");
   const bd = document.getElementById("bd");
-  while (season !== null) {
+  while (season == null) {
     season = prompt("숫자를 입력해주세요.");
 
     switch (season) {

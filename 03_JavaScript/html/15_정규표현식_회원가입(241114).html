@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/15_정규표현식_회원가입(241114).css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>행복나라 회원가입</h1>
+      <label>아이디 : </label>
+      <input
+        type="text"
+        placeholder="아이디를 입력하세요."
+        required
+        id="userId"
+      />
+      <p id="idResult"></p>
+
+      <label>비밀번호 : </label>
+      <input
+        type="password"
+        placeholder="비밀번호를 입력하세요."
+        required
+        id="password"
+      />
+      <p id="pwResult"></p>
+
+      <label>비밀번호 확인 : </label>
+      <input
+        type="password"
+        placeholder="비밀번호 확인"
+        required
+        id="pwCheck"
+      />
+      <p id="pwCheckResult"></p>
+
+      <label>이름 : </label>
+      <input
+        type="text"
+        placeholder="이름를 입력하세요."
+        required
+        id="userName"
+      />
+      <p id="nameResult"></p>
+
+      <label class="gender">성별 : </label>
+      <input type="radio" name="gender" />남자 <br />
+      <input type="radio" name="gender" />여자
+
+      <button onclick="signUp()">가입</button>
+    </div>
+
+    <script>
+      function signUp() {
+        const userId = document.getElementById("userId").value;
+        const idResult = document.getElementById("idResult");
+        const password = document.getElementById("password").value;
+        const pwResult = document.getElementById("pwResult");
+        const userName = document.getElementById("userName").value;
+        const nameResult = document.getElementById("nameResult");
+        const pwCheck = document.getElementById("pwCheck").value;
+        const pwCheckResult = document.getElementById("pwCheckResult");
+
+        const pwRegexp =
+          /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+
+        if (pwRegexp.test(password)) {
+          pwResult.innerText = "유효한 패스워드 입니다.";
+          pwResult.className = "success-msg";
+        } else {
+          pwResult.innerHTML =
+            "패스워드가 유효하지 않습니다.<br> 영어 대/소문자,숫자,특수문자를 포함해주세요. ";
+          pwResult.className = "error-msg";
+        }
+
+        const idRegexp = /^[a-zA-Z0-9_-]{6,16}$/;
+
+        if (idRegexp.test(userId)) {
+          idResult.innerText = "유효한 아이디입니다.";
+          idResult.className = "success-msg";
+        } else {
+          idResult.innerText =
+            " 영어 대/소문자,숫자,특수문자(-,_)를 포함해주세요.";
+          idResult.className = "error-msg";
+        }
+
+        const nameRegexp = /^[가-힇]{2,15}$/;
+        if (nameRegexp.test(userName)) {
+          nameResult.innerText = "";
+        } else {
+          nameResult.innerText = "한글 2-15자로 입력해주세요.";
+          nameResult.className = "error-msg";
+        }
+
+        //비밀번호확인 ..........모르겠어요
+        if (password == pwCheck) {
+          pwCheckResult.innerText = "비밀번호가 일치합니다.";
+          pwCheckResult.className = "success-msg";
+        } else {
+          pwCheckResult.innerText = "비밀번호가 일치하지 않습니다.";
+          pwCheckResult.className = "error-msg";
+        }
+      }
+    </script>
+  </body>
+</html>
