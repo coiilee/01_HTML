@@ -3,7 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>기본이벤트 제거</title>
   </head>
-  <body></body>
+  <body>
+    <h1>기본 이벤트 제거</h1>
+    <pre>
+        a태그의 기본 이벤트
+        :클릭 시 href 속성에 작성된 url로 이동 
+
+        for 태그의 기본 이벤트 
+        : form 태그 내부에서 submit 동작 발생 시 
+        action 속성에 작성된 url로 
+        form 태그 내부 input 값들을 제출 
+    </pre>
+
+    <!--방법1) e.pr event Default() 사용-->
+    <!--
+    e.preventDefault()
+    e = event 약자 
+    prevent = 막다 
+    Default = 기본설정 
+
+    html의 순수 이벤트의 기본 동작을 js에서 기본 동작을 막는 메서드 
+    -->
+    <form action="결과.html">
+      이름 : <input type="text" id="id-name" name="name-name" /><br />
+      나이 : <input type="text" id="id-age" name="name-age" /><br />
+      이메일 : <input type="text" id="id-email" name="name-email" /><br />
+      <button onclick="제출(event)">등록하기</button>
+    </form>
+    <script src="../js/19_이벤트(241115).js"></script>
+
+    <hr />
+
+    <form action="결과.html">입력: <input type="text" id="inPutTest" /></form>
+  </body>
 </html>

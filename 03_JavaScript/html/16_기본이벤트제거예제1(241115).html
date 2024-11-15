@@ -11,16 +11,27 @@
       <h1>약관동의</h1>
       <!--약관동의 활용해서 모든 약관을 동의했을 경우 회원가입 버튼 활성화
       -->
-      <label><input type="checkbox" id="check1" />필수약관1 동의</label>
-      <label><input type="checkbox" id="check2" />필수약관2 동의</label>
-      <label><input type="checkbox" id="check3" />필수약관3 동의</label>
-
-      <button onclick="submitForm()">회원가입</button>
+      <label
+        ><input type="checkbox" id="check1" onclick="동의버튼()" />필수약관1
+        동의</label
+      >
+      <label
+        ><input type="checkbox" id="check2" onclick="동의버튼()" />필수약관2
+        동의</label
+      >
+      <label
+        ><input type="checkbox" id="check3" onclick="동의버튼()" />필수약관3
+        동의</label
+      >
+      <button id="signBtn()" disabled>회원가입</button>
       <script>
-        function submitForm() {
-          const check1 = document.getElementById("check1").value;
-          const check2 = document.getElementById("check2").value;
-          const check3 = document.getElementById("check3").value;
+        function 동의버튼() {
+          const agree1 = document.getElementById("check1").checked;
+          const agree2 = document.getElementById("check2").checked;
+          const agree3 = document.getElementById("check3").checked;
+
+          const agreeAll = agree1 && agree2 && agree3;
+          document.getElementById("signBtn").disabled = !agreeAll;
         }
       </script>
     </div>

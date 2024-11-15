@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>기본이벤트 제거</title>
+    <title>표준 이벤트 모델</title>
+    <style>
+      #divBtn {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
-    <h1>기본 이벤트 제거</h1>
+    <h1>표준 이벤트 모델(요소.add Event Listener())</h1>
     <pre>
-        a태그의 기본 이벤트
-        :클릭 시 href 속성에 작성된 url로 이동 
+        한 요소에서 중복되는 이벤트들을 만들어 넣어 
+        여러 이벤트를 한번에 작동시키거나 추가할 수 있음
 
-        for 태그의 기본 이벤트 
-        : form 태그 내부에서 submit 동작 발생 시 
-        action 속성에 작성된 url로 
-        form 태그 내부 input 값들을 제출 
+        button 뿐만 아니라 div나 span a h3등 .. 원하는 태그나 요소를 
+        버튼처럼 만들거나 이외 이벤트 기능들을 추가할 수 있음 
     </pre>
-
-    <!--방법1) e.pr event Default() 사용-->
-    <!--
-    e.preventDefault()
-    e = event 약자 
-    prevent = 막다 
-    Default = 기본설정 
-
-    html의 순수 이벤트의 기본 동작을 js에서 기본 동작을 막는 메서드 
-    -->
-    <form action="결과.html">
-      이름 : <input type="text" id="id-name" name="name-name" /><br />
-      나이 : <input type="text" id="id-age" name="name-age" /><br />
-      이메일 : <input type="text" id="id-email" name="name-email" /><br />
-      <button onclick="제출(event)">등록하기</button>
-    </form>
-    <script src="../js/19_이벤트(241115).js"></script>
+    <h3>id로 버튼처럼 div 설정하기</h3>
+    <div id="divBtn">클릭</div>
+    <script src="../js/19_이벤트.js"></script>
   </body>
 </html>
