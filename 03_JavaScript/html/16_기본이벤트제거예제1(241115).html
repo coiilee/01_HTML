@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>약관동의</title>
+    <link rel="stylesheet" href="../css/16_기본이벤트제거예제1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>약관동의</h1>
+      <!--약관동의 활용해서 모든 약관을 동의했을 경우 회원가입 버튼 활성화
+      -->
+      <label><input type="checkbox" id="check1" />필수약관1 동의</label>
+      <label><input type="checkbox" id="check2" />필수약관2 동의</label>
+      <label><input type="checkbox" id="check3" />필수약관3 동의</label>
+
+      <button onclick="submitForm()">회원가입</button>
+      <script>
+        function submitForm() {
+          const check1 = document.getElementById("check1").value;
+          const check2 = document.getElementById("check2").value;
+          const check3 = document.getElementById("check3").value;
+        }
+      </script>
+    </div>
+  </body>
+</html>
