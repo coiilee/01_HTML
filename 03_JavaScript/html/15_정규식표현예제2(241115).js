@@ -24,7 +24,7 @@ function checkPhone() {
   const userPhone = document.getElementById("user-phone");
   const errorMsg = document.getElementById("err-msg");
   const phonePattern = /^[0-9]{3,}+\-[0-9]+\-[0-9]{3,4}$/;
-  const phonePattern = /^010-\d{4}+\-\d{4}$/;
+  //const phonePattern = /^010-\d{4}+\-\d{4}$/;
 
   if (phonePattern.test(userPhone)) {
     errorMsg.style.display = "none";
