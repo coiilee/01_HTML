@@ -39,5 +39,7 @@ function 가입하기() {
   if (!emailPattern.test(userEmail)) {
     alert("잘못된 이메일 주소입니다.");
     return false;
+  } else {
+    alert("회원가입이 완료되었습니다.");
   }
 }

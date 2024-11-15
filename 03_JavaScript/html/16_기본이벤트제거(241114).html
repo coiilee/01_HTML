@@ -3,28 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>기본이벤트 제거</title>
+    <title>기본 이벤트 제거</title>
   </head>
   <body>
     <h1>기본 이벤트 제거</h1>
     <pre>
-        a태그의 기본 이벤트
-        :클릭 시 href 속성에 작성된 url로 이동 
+        a 태그의 기본 이벤트
+        :클릭시 href 속성에 작성된 url로 이동
 
-        for 태그의 기본 이벤트 
-        : form 태그 내부에서 submit 동작 발생 시 
-        action 속성에 작성된 url로 
-        form 태그 내부 input 값들을 제출 
+        for 태그의 기본 이벤트
+        : form 태그 내부에서 submit 동작 발생 시
+        action 속성에 작성된 url로
+        form 태그 내부 input 값들을 제출
     </pre>
 
-    <!--방법1) e.pr event Default() 사용-->
-    <!--
+    <!-- 방법1) e.preventDefault() 사용
     e.preventDefault()
-    e = event 약자 
-    prevent = 막다 
-    Default = 기본설정 
-
-    html의 순수 이벤트의 기본 동작을 js에서 기본 동작을 막는 메서드 
+    e = event 약자
+    prevent = 막다
+    Default = 기본설정
+    html의 순수 이벤트의 기본 동작을 js에서 기본 동작을 막는 메서드
     -->
     <form action="결과.html">
       이름 : <input type="text" id="id-name" name="name-name" /><br />
@@ -32,27 +30,30 @@
       이메일 : <input type="text" id="id-email" name="name-email" /><br />
       <button onclick="제출(event)">등록하기</button>
     </form>
-    <script src="../js/19_이벤트(241115).js"></script>
+    <script src="../js/16_기본이벤트제거.js"></script>
 
     <hr />
-    <!--19.이벤트.html에 작성된 이벤트 모델 방법 활용-->
+    <!-- 방법2) 일반 버튼 클릭 시 form 태그 제출 막기
+
+    19_이벤트.html 에 작성된 이벤트 모델 방법 활용
+    -->
     <form action="결과.html">
-      입력: <input type="text" id="inPutTest" />
+      입력 : <input type="text" id="inputTest" />
       <button type="button" id="btn">제출하기</button>
     </form>
-
     <script>
       const btn = document.getElementById("btn");
       const inputTest = document.getElementById("inputTest");
       btn.addEventListener("click", () => {
-        const vle = inputTest.value; //값이 잇음 true 없으면 false
+        const vle = inputTest.value;
+        //값이 있으면 true 값이 없으면 false
 
-        //만약 입력한 값이 없을때만 alert창을 표기하기 원한다면
+        // 만약에 입력한 값이 없을 때만 alert창을 표기하길 원한다면
         /*
-        vle값이 들어있을 때 = true 왼쪽에 !를 붙여줌으로써 false일때 true로
-        변경 가능
-        if(!vle) {
-          alert ("입력란에 값을 입력해주세요.");
+        vle 값이 들어있을때 = true 왼쪽에 !를붙여줌으로써 false일 때 true 변경 가능
+        if (!vle) {
+          alert("입력란에 값을 입력해주세요.");
+        }
         
         */
         if (vle) {
@@ -61,11 +62,16 @@
           alert("입력란에 값을 입력해주세요.");
         }
       });
+
       /*
-      아래 모두 익명함수로 버튼을 클릭시 실행할 기능 작성 
-      1. function 기능명 생략(매개변수들어갈자리설정){실행 문장들 작성}
-      btn.addEventListener("click", function()  {})
-      2. 기능 자체 표현을 생략(매개변수들어갈자리설정) =>*/
+      아래 모두 익명함수로 버튼을 클릭시 실행할 기능 작성
+      1. function 기능명 생략 (매개변수들어갈자리설정) {실행 문장들 작성}
+      btn.addEventListener("click",  function ()    {})
+
+      2. 기능자체표현을 생략 (매개변수들어갈자리설정) => {실행 문장들 작성}
+      2번을 가장 많이 사용
+      btn.addEventListener("click",           () => {})
+      */
     </script>
   </body>
 </html>
