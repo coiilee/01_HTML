@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TOPBALANCE - 게임 결과</title>
+    <style>
+      .result-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 500px;
+        width: 100%;
+        background-color: hsl(56, 100%, 92%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        position: relative;
+      }
+      .total-luck {
+        width: 80%;
+        flex-direction: column;
+        height: 100px;
+        text-align: center;
+        border: 1px solid black;
+        box-shadow: 0 0 2px rgba(0, 0, 0, alpha);
+        border-radius: 15px;
+        background-color: white;
+        margin: auto;
+      }
+      .total-luck p {
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .result-container a {
+        margin: auto;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+      .trump {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .trump img {
+        margin: 13px;
+        width: 80px;
+        height: 100px;
+      }
+
+      .trump-luck {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .trump-luck p {
+        margin: 0px 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .luck-sentence {
+        margin: auto;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-container">
+      <div class="total-luck">
+        <p>행운지수 88</p>
+      </div>
+
+      <br />
+
+      <div class="trump">
+        <img src="/02_CSS/image/트럼프이미/트럼프이미지/C11.png" />
+        <img src="/02_CSS/image/트럼프이미/트럼프이미지/D1.png" />
+        <img src="/02_CSS/image/트럼프이미/트럼프이미지/S10.png" />
+        <img src="/02_CSS/image/트럼프이미/트럼프이미지/H4.png" />
+      </div>
+
+      <div class="trump-luck">
+        <p>건강운<br />22</p>
+        <p>재물운<br />22</p>
+        <p>학업운<br />22</p>
+        <p>연애운<br />22</p>
+      </div>
+
+      <div class="luck-sentence">
+        <h3>마음이 풍족한 하루</h3>
+        <p>
+          ▷ 오늘의 건강운<br />
+          ▷ 오늘의 재물운<br />
+          ▷ 오늘의 학업운<br />
+          ▷ 오늘의 연애운
+        </p>
+      </div>
+
+      <div class="lucky-menu">
+        <h3>오늘의 추천메뉴</h3>
+        <img src="" />
+        <p>
+          짜장면
+          <br />
+          연애운이 낮은 당신, 짜장면을 추천합니다.
+        </p>
+      </div>
+
+      <div>
+        <input />
+      </div>
+
+      <a href="/bamboo">댓글 보러가기</a>
+    </div>
+  </body>
+</html>
